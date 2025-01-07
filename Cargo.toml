@@ -1,0 +1,19 @@
+[package]
+name = "cookey"
+version = "0.1.0"
+edition = "2021"
+
+[dev-dependencies]
+approx = "0.5.1"
+criterion = { version = "0.5.1", features = ["html_reports"]}
+rand = "0.8.5"
+
+[[bench]]
+name = "cookey_benchmark"
+harness = false
+
+[dependencies]
+aligned-vec = "0.6.1"
+lazy_static = "1.5.0"
+pulp = "0.21.1"
+rayon = "1.10.0"
