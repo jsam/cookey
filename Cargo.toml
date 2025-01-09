@@ -3,6 +3,13 @@ name = "cookey"
 version = "0.1.0"
 edition = "2021"
 
+[features]
+default = [] 
+simd = ["nightly"] # Enables SIMD support, requires nightly
+
+[target.'cfg(feature = "simd")'.dependencies]
+nightly = { version = "1", optional = true }
+
 [dev-dependencies]
 approx = "0.5.1"
 criterion = { version = "0.5.1", features = ["html_reports"]}
